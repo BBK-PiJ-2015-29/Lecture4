@@ -30,12 +30,12 @@ boolean isValidBinary(String s) {
 		char zero = '0';
 		char one = '1';
 		if (!Character.isDigit(c)) {
-			Console.println("Not a valid binary");
+			Console.println("Not a valid binary A ");
 			return false;
 		}
 		else {
-			if (!(c.equal(zero) || !(c.equal(one)))) {
-				Console.println("Not a valid binary");
+			if (!c.equals(zero) || !c.equals(one)) {
+				Console.println("Not a valid binary B");
 				return false;
 			}
 		}
@@ -52,7 +52,8 @@ String decimal2binary() {
 	boolean valid = isValidDecimal();
 	if (valid) {
 		int decimal1 = Integer.parseInt(decimal);
-			
+		
+		
 	}
 }
 
