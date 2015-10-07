@@ -1,6 +1,6 @@
 
 //binary input method
-String binary2decimal(String s) {
+int binary2decimal(String s) {
 	Console.println("Input binary number:");
 	Console.print("> ");
 	String binary1 = System.console().readLine();
@@ -10,17 +10,22 @@ String binary2decimal(String s) {
 		//read binary loop
 		int value = 0;
 		int length = binary1.length();
-		
+		//loop counter variable 
+		int pos = 0;
 		for(int i = (length -1); i > -1 ; i--) {
 			char c = binary1.charAt(i);
 			char zero = '0';
 			char one = '1';
+			// use loop counter as exponent
 			if (c.equals(one)) {
-				value = value + (Math.pow(2, i));
+				value = value + (Math.pow(2, pos));
 			}
+			pos++
 		}
 		Console.println("Value of binary is: " + value);
-	}	
+		return value;
+	}
+	
 }
 
 // valid binary check
