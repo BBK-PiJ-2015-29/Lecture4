@@ -33,12 +33,10 @@ boolean isValidBinary(String s) {
 			Console.println("Not a valid binary A ");
 			return false;
 		}
-		else {
-			if (!c.equals(zero) || !c.equals(one)) {
+		else if ((c != zero) && (c != one)) {
 				Console.println("Not a valid binary B");
 				return false;
 			}
-		}
 	}
 	return true;
 }
