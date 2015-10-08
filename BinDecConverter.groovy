@@ -22,7 +22,7 @@ int binary2decimal(String s) {
 			}
 			pos++
 		}
-		Console.println("Value of binary is: " + value);
+		Console.println(binary1 + " in decimal is: " + value);
 		return value;
 	}
 	
@@ -52,11 +52,23 @@ String decimal2binary() {
 	Console.print("> ");
 	String decimal = System.console().readLine();
 	// check valid decimal
-	boolean valid = isValidDecimal();
+	boolean valid = isValidDecimal(decimal);
 	if (valid) {
 		int decimal1 = Integer.parseInt(decimal);
-		
-		
+		String binary = "";
+		String temp;
+		int i = decimal1;
+		while (i >= 1) {
+			if ((i % 2) == 1) {
+				temp = "1";
+				binary = temp.concat(binary);
+			} else {
+				temp = "0";
+				binary = temp.concat(binary);
+			}
+			i = i/2;
+		}
+	println(decimal + " in binary is: " + binary);	
 	}
 }
 
@@ -89,7 +101,7 @@ while (running) {
 		break;
 		case 1: binary2decimal();
 		break;
-		case 2: //decimal input method
+		case 2: decimal2binary();
 		break;
 		default: Console.println("Invalid input, try again:");
 	}
