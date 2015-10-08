@@ -84,12 +84,23 @@ boolean isValidDecimal(String s) {
 	return true;
 }
 
+//define power method
+int power(int b, int e) {
+	
+	int power = Math.pow(b, e);
+	Console.println(b + " to the power of " + e + " is " + power);
+	return power;
+}
+
+
 // main code
 boolean running = true;
 
 while (running) {
-	Console.println("Input 1 for a binary input");
-	Console.println("Input 2 for a decimal input");
+	Console.println("Input 1 for a binary to decimal conversion");
+	Console.println("Input 2 for a decimal to binary conversion");
+	Console.println("Input 3 for exponent calculator - b^e")
+	Console.println("Input 4 for exponent calculator - 2^e")
 	Console.println("Input 0 to exit");
 	Console.print("> ");
 
@@ -102,6 +113,25 @@ while (running) {
 		case 1: binary2decimal();
 		break;
 		case 2: decimal2binary();
+		break;
+		case 3: 
+			Console.println("Input base integer: ");
+			Console.print("> ");
+			input1 = System.console().readLine();
+			int base = Integer.parseInt(input1);
+			
+			Console.println("Input exponent integer: ");
+			Console.print("> ");
+			input1 = System.console().readLine();
+			int exp = Integer.parseInt(input1);
+			power(base, exp);
+		break;
+		case 4: 
+			Console.println("Input exponent integer: ");
+			Console.print("> ");
+			input1 = System.console().readLine();
+			int exp = Integer.parseInt(input1);
+			power(2, exp);
 		break;
 		default: Console.println("Invalid input, try again:");
 	}
